@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import MainMenu from './MainMenu';
-import BrainGame from './BrainGame';
+import MainMenu from './MainMenu.js';
+import BrainGame from './BrainGame.js';
 
 function App() {
   return (

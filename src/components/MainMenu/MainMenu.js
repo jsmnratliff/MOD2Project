@@ -6,7 +6,7 @@ function MainMenu() {
   return (
     <div className="main-menu">
       <h1>SceneIt! Trivia Game</h1>
-      <Link to="/BrainGame">
+      <Link to="./BrainGame">
         <Button className="plzDontStopTheMusic" variant="contained" color="primary">
           Don't Stop the Music
         </Button>
