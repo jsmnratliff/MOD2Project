@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SceneIt! Trivia Game</title>
+</head>
+<body>
+    <div class="title">SceneIt! Trivia Game</div>
+    <button class="button" onclick="startGame()">Don't Stop the Music</button>
+
+    <script>
+        function startGame() {
+            // Add code here to start the game
+            // For example, update the URL to include a query parameter
+            window.history.pushState({}, '', '/?game=1');
+            
+            // You can also update the content on the page dynamically using JavaScript
+            document.querySelector('.title').textContent = 'SceneIt! Trivia Game - Game in Progress';
+            document.querySelector('.button').style.display = 'none'; // Hide the button
+        }
+
+        // Check if the page URL has a "game" query parameter when the page loads
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.has('game') && urlParams.get('game') === '1') {
+                // Update the page content to indicate that the game is in progress
+                document.querySelector('.title').textContent = 'SceneIt! Trivia Game - Game in Progress';
+                document.querySelector('.button').style.display = 'none'; // Hide the button
+            }
+        }
+    </script>
+</body>
+</html>
